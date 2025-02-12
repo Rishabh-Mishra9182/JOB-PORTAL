@@ -4,7 +4,7 @@ import { assets, JobCategories, JobLocations } from "../assets/assets";
 import JobCard from "./JobCard";
 
 const JobListing = () => {
-  const { isSearched, searchFilter, setSearchFilter, setIsSearched ,jobs} =
+  const { isSearched, searchFilter, setSearchFilter, setIsSearched, jobs } =
     useContext(AppContext);
   const [showFilter, setShowFilter] = useState(true);
   return (
@@ -47,7 +47,12 @@ const JobListing = () => {
             </>
           )}
         {/* Filter Button */}
-        <button onClick={ e => setShowFilter(prev => !prev)} className="px-6 py-1.5 rounded border border-gray-400 lg:hidden">{showFilter ? "Close" : "Filters"}</button>
+        <button
+          onClick={(e) => setShowFilter((prev) => !prev)}
+          className="px-6 py-1.5 rounded border border-gray-400 lg:hidden"
+        >
+          {showFilter ? "Close" : "Filters"}
+        </button>
         <div className={showFilter ? "" : "max-lg:hidden"}>
           <h4 className="font-medium text-lg py-4">Search By Categories</h4>
           <ul className="space-y-4 text-gray-600">
@@ -73,14 +78,14 @@ const JobListing = () => {
       </div>
       {/* Job Listing */}
       <section className="w-full lg:w-3/4 text-gray-800 max-lg:px-4">
-        <h3 className="font-medium text-3xl py-2" id="job-list">Latest Jobs</h3>
+        <h3 className="font-medium text-3xl py-2" id="job-list">
+          Latest Jobs
+        </h3>
         <p className="mb-8">Get your desired jobs from top companies</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-          {
-            jobs.map((job, index)=> (
-              <JobCard key={index}
-job={job}/>           ))
-          }
+          {jobs.map((job, index) => (
+            <JobCard key={index} job={job} />
+          ))}
         </div>
       </section>
     </div>
