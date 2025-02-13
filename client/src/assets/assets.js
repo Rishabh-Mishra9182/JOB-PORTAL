@@ -33,6 +33,7 @@ import lock_icon from './lock_icon.svg'
 import samsung_logo from './samsung_logo.png'
 import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
+import deloitte_icon from './deloitte_icon.png'
 
 export const assets = {
     logo,
@@ -69,7 +70,8 @@ export const assets = {
     lock_icon,
     samsung_logo,
     adobe_logo,
-    amazon_logo
+    amazon_logo,
+    deloitte_icon
 }
 
 export const JobCategories = [
@@ -531,7 +533,11 @@ export const jobsData = [
         },
         description: `
         <p>Join us as a Business Analyst to optimize our processes and improve overall efficiency. You will work closely with stakeholders to identify business needs and gather requirements for new projects. Your analytical skills will help drive decision-making and ensure that solutions align with business objectives.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
+        <h2><str<img
+            className="h-6 transform hover:scale-130"
+            src={assets.samsung_logo}
+            alt="google"
+          />ong>Key Responsibilities</strong></h2>
         <ol>
             <li>Gather and analyze business requirements from stakeholders.</li>
             <li>Develop detailed documentation of business processes and workflows.</li>

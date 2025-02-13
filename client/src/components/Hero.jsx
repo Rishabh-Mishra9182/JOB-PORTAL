@@ -88,6 +88,11 @@ const Hero = () => {
             src={assets.samsung_logo}
             alt="google"
           />
+          <img
+            className="h-6 transform hover:scale-130"
+            src={assets.deloitte_icon}
+            alt="deliotte"
+          />
         </div>
       </div>
     </div>
