@@ -1,9 +1,10 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { openSignIn } = useClerk();
   const { user } = useUser();
   return (
@@ -12,7 +13,8 @@ const Navbar = () => {
         <img
           src={assets.logo}
           alt="logo"
-          className="transform hover:scale-110 h-5 md:h-8 lg:h-8"
+          className="transform hover:scale-110 h-5 md:h-8 lg:h-8 cursor-pointer"
+          onClick={() => navigate('/')}
         />
         {user ? (
           <div className="flex items-center gap-3">
