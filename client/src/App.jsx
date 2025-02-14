@@ -7,10 +7,10 @@ import RecuiterLogin from "./components/RecuiterLogin";
 import { AppContext } from "./context/AppContext";
 
 const App = () => {
-  const {showRecuiterLogin} = useContext(AppContext)
+  const { showRecuiterLogin } = useContext(AppContext);
   return (
     <div>
-     { showRecuiterLogin && <RecuiterLogin />}
+      {showRecuiterLogin && <RecuiterLogin />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apply-job/:id" element={<ApplyJob />} />
