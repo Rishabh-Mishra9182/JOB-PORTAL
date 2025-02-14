@@ -83,3 +83,10 @@
 .rich-text li{
   margin-bottom: 8px;
 }
+
+.cross-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
