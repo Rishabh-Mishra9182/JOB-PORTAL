@@ -35,7 +35,9 @@ import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
 import deloitte_icon from './deloitte_icon.png'
 
+
 export const assets = {
+   
     logo,
     search_icon,
     cross_icon,
